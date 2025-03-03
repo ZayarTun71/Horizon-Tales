@@ -1,0 +1,9 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.s_page {
+    flex: 1;
+    overflow-y: auto;
+}

@@ -1,9 +1,10 @@
 .s_card {
   background: #fff;
-  height: fit-content;
-  width: calc(90% / 3);
-
-  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
   .image_wrapper {
     position: relative;
     display: inline-block;
@@ -34,7 +35,7 @@
       font-size: 18px;
       font-weight: bold;
       opacity: 0;
-      transition: opacity 0.5s  ease-in-out;
+      transition: opacity 0.5s ease-in-out;
     }
 
     &:hover .overlay {

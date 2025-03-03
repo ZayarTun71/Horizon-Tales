@@ -1,0 +1,31 @@
+.s_content {
+    background-color: #F6F7F8;
+    width: 100%;
+    color: #000000;
+    padding: 3rem;
+
+    .content_inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        // grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+    .content_inner {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards per row */
+    }
+}
+
+@media (max-width: 400px) {
+    .content_inner {
+        grid-template-columns: repeat(1, 1fr);
+        /* 1 card per row */
+    }
+}

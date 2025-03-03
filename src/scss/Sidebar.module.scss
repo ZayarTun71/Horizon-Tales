@@ -1,13 +1,13 @@
 .sidebar {
     height: 100vh;
-    background-color: #1a1a1a;
+    background-color: #151515;
     color: white;
     transition: width 0.3s ease-in-out;
-    padding: 1rem;
+    padding: 3rem;
     overflow: hidden;
   
     &.open {
-      width: 250px;
+      width: 350px;
     }
   
     &.collapsed {

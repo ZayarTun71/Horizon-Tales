@@ -15,12 +15,14 @@ const Sidebar = ({ menuItems, onPageChange }: SidebarProps) => {
             <ul className={styles.navList}>
                 {menuItems.map((item: MenuItem, index: any) => (
                     <li key={index} className={styles.navItem}>
-                        <Link href="#" role="button" className={styles.navLink} onClick={() => onPageChange(item.href)}>
+                        <Link href="" role="button" className={styles.navLink} onClick={!item.children ? () => onPageChange(item.href) : undefined}
+                        >
                             {isOpen && <span>{item.label}</span>}
                             {item.children && isOpen && (
                                 <button
                                     className={styles.dropdownToggle}
                                     onClick={(e) => {
+                                        e.preventDefault();
                                         e.stopPropagation();
                                         setOpenDropdown(openDropdown === index ? null : index);
                                     }}
@@ -33,7 +35,7 @@ const Sidebar = ({ menuItems, onPageChange }: SidebarProps) => {
                             <ul className={styles.subMenu}>
                                 {item.children.map((child: MenuItem, childIndex: number) => (
                                     <li key={childIndex} className={styles.subMenuItem}>
-                                        <Link href="#" role="button" className={styles.subMenuLink} onClick={() => onPageChange(child.href)} >
+                                        <Link href="" role="button" className={styles.subMenuLink} onClick={() => onPageChange(child.href)} >
                                             {child.label}
                                         </Link>
                                     </li>

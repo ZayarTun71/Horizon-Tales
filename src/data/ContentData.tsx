@@ -1,67 +1,78 @@
 export const ContentData = [
     {
-        imageSrc: "images/thumbs/masonry/woodcraft-600.jpg",
-        imageSrcSet: "images/thumbs/masonry/woodcraft-600.jpg 1x, images/thumbs/masonry/woodcraft-1200.jpg 2x",
-        altText: "Woodcraft",
-        title: "title",
-        link: "/link",
+        imageSrc: "videos/dancing_human.mp4",
+        imageSrcSet: "videos/dancing_human.mp4",
+        altText: "Dancing Human",
+        title: "Dancing Human",
+        link: "#",
         categories: [
-            { name: "Design", link: "/category/design" },
-            { name: "Photography", link: "/category/photography" }
+            { name: "Funny", link: "/category/design" },
+            { name: "Party", link: "/category/photography" }
         ],
-        date: "Apr 29, 2019",
-        description: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua..."
+        date: "March 5, 2025",
+        description: "Group of young people dancing happily, while a boy with dark glasses leads them right in front."
     },
     {
-        imageSrc: "images/thumbs/masonry/guitarist-600.jpg",
-        imageSrcSet: "images/thumbs/masonry/real-600.jpg",
-        altText: "Woodcraft",
-        title: "title",
-        link: "/link",
+        imageSrc: "images/jimi_hendrix.webp",
+        imageSrcSet: "images/jimi_hendrix.webp",
+        altText: "Jimi Hendrix",
+        title: "Jimi Hendrix",
+        link: "#",
         categories: [
-            { name: "Design", link: "/category/design" },
-            { name: "Photography", link: "/category/photography" }
+            { name: "Music", link: "#" },
         ],
-        date: "Apr 29, 2019",
-        description: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua..."
+        date: "March 5, 2025",
+        description: "Jimi Hendrix (1942–1970) was an American rock guitarist, singer, and songwriter, widely regarded as one of the greatest guitarists of all time. Known for his innovative playing style, use of feedback and distortion, and electrifying performances, he revolutionized rock music in the late 1960s."
     },
     {
-        imageSrc: "images/thumbs/masonry/guitarist-600.jpg",
-        imageSrcSet: "images/thumbs/masonry/real-600.jpg",
-        altText: "Woodcraft",
-        title: "title",
-        link: "/link",
+        imageSrc: "images/bagan_temples.jpg",
+        imageSrcSet: "images/bagan_temples.jpg",
+        altText: "Bagan Temples",
+        title: "Bagan Temple",
+        link: "#",
         categories: [
-            { name: "Design", link: "/category/design" },
-            { name: "Photography", link: "/category/photography" }
+            { name: "History", link: "#" },
+            { name: "Pagoda", link: "#" },
         ],
-        date: "Apr 29, 2019",
-        description: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua..."
+        date: "March 5, 2025",
+        description: "Bagan is an ancient city in Myanmar (Burma), famous for its vast archaeological site filled with thousands of Buddhist temples, stupas, and pagodas."
     },
     {
-        imageSrc: "images/thumbs/masonry/guitarist-600.jpg",
-        imageSrcSet: "images/thumbs/masonry/real-600.jpg",
-        altText: "Woodcraft",
-        title: "title",
-        link: "/link",
+        imageSrc: "images/brooklyn_bridge.jpg",
+        imageSrcSet: "images/brooklyn_bridge.jpg",
+        altText: "Brooklyn Bridge",
+        title: "Brooklyn Bridge",
+        link: "#",
         categories: [
-            { name: "Design", link: "/category/design" },
-            { name: "Photography", link: "/category/photography" }
+            { name: "city", link: "#" },
         ],
-        date: "Apr 29, 2019",
-        description: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua..."
+        date: "March 5, 2025",
+        description: "The Brooklyn Bridge is a famous suspension bridge in New York City that connects Manhattan and Brooklyn over the East River."
     },
     {
-        imageSrc: "images/thumbs/masonry/woodcraft-600.jpg",
-        imageSrcSet: "images/thumbs/masonry/woodcraft-600.jpg 1x, images/thumbs/masonry/woodcraft-1200.jpg 2x",
-        altText: "Woodcraft",
-        title: "title",
-        link: "/link",
+        imageSrc: "videos/city_of_tokyo_at_night.mp4",
+        imageSrcSet: "videos/city_of_tokyo_at_night.mp4",
+        altText: "City of Tokyo at night",
+        title: "City of Tokyo at night",
+        link: "#",
         categories: [
-            { name: "Design", link: "/category/design" },
-            { name: "Photography", link: "/category/photography" }
+            { name: "Night Life", link: "#" },
+            { name: "Chill", link: "#" }
         ],
-        date: "Apr 29, 2019",
-        description: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua..."
+        date: "March 5, 2025",
+        description: "City of Tokyo, Japan, looking towards the rainbow bridge at night, while boats cross the water; On the other side of the bridge there are the buildings with their illuminated windows, a ferris wheel, and the lights of the cars going from one side to the other."
     },
+    {
+        imageSrc: "images/nature_of_norway.jpg",
+        imageSrcSet: "images/nature_of_norway.jpg",
+        altText: "Nature of Norway",
+        title: "Nature of Norway",
+        link: "#",
+        categories: [
+            { name: "Nature", link: "#" },
+        ],
+        date: "March 5, 2025",
+        description: "Norway's nature vibe is breathtaking, dramatic, and peaceful, with a mix of majestic fjords, towering mountains, lush forests, and Arctic wonders. It’s a paradise for nature lovers, adventurers, and those seeking tranquility."
+    },
+    
 ];

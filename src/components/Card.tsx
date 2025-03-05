@@ -14,6 +14,10 @@ interface CardProps {
     description: string;
 }
 
+const isVideo = (src: string) => {
+    return /\.(mp4|webm|ogg)$/i.test(src);
+};
+
 const Card: React.FC<CardProps> = ({
     imageSrc,
     imageSrcSet,
@@ -29,7 +33,11 @@ const Card: React.FC<CardProps> = ({
             <div className={styles.entry_image}>
                 <a href={link} className={styles.entry_image_link}>
                     <div className={styles.image_wrapper}>
-                        <img src={imageSrc} srcSet={imageSrcSet} alt={altText} />
+                        {isVideo(imageSrc) ? (
+                            <video src={imageSrc} poster={imageSrcSet} autoPlay loop muted playsInline />
+                        ) : (
+                            <img src={imageSrc} srcSet={imageSrcSet} alt={altText} />
+                        )}
                         <div className={styles.overlay}>
                             <span className={styles.overlay_text}><Ellipsis /></span>
                         </div>

@@ -6,5 +6,5 @@ export interface MenuItem {
 
 export interface SidebarProps {
     menuItems: MenuItem[];
-    onPageChange: (href: string) => void;
+    onPageChange: (href: string | any) => void;
   }

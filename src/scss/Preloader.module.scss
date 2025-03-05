@@ -21,8 +21,8 @@ $primary-color: #333;
   gap: 8px;
 
   div {
-    width: 12px;
-    height: 12px;
+    width: 0.5rem;
+    height: 0.5rem;
     background: $primary-color;
     border-radius: 50%;
     animation: fade 1.5s infinite ease-in-out;

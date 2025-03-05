@@ -27,30 +27,26 @@ export default function Home() {
   };
 
   const renderContent = () => {
-    // Check if the activePage is "home" or "/home"
+    
     if (activePage === "home") {
       return <Content />;
     }
 
-    // Check for other cases, like "/myanmar"
     if (activePage === "myanmar") {
-      return <div>Hello</div>;  // You can replace this with actual content for Myanmar
+      return <div>Hello</div>;
     }
 
-    // Default fallback (if activePage doesn't match any of the cases)
     return <Content />;
   };
 
   return (
     <Wrapper>
-      <>
         <div className={styles.layout}>
           <Sidebar menuItems={menuItems} onPageChange={handlePageChange} />
           <Suspense fallback={<Preloader/>}>
             <div className={styles.s_page}>{renderContent()}</div>
           </Suspense>
         </div>
-      </>
     </Wrapper>
   );
 }

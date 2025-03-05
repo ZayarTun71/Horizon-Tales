@@ -1,0 +1,21 @@
+.s_about{
+    background-color: #F6F7F8;
+    width: 100%;
+    height: 100vh;
+    color: #000000;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    
+    .about_inner{
+        width: 100%;
+        height: auto;
+        background-color: #ffff;
+        text-align: center;
+    }
+
+    h1{ 
+        font-weight: 600;
+        font-size: 3rem;
+    }
+}

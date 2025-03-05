@@ -1,18 +1,8 @@
 "use client";
 
+import { CardProps } from "@/interfaces/Interface";
 import styles from "@/scss/Card.module.scss";
 import { Ellipsis } from "lucide-react";
-
-interface CardProps {
-    imageSrc: string;
-    imageSrcSet: string;
-    altText: string;
-    title: string;
-    link: string;
-    categories: { name: string; link: string }[];
-    date: string;
-    description: string;
-}
 
 const isVideo = (src: string) => {
     return /\.(mp4|webm|ogg)$/i.test(src);
@@ -34,7 +24,11 @@ const Card: React.FC<CardProps> = ({
                 <a href={link} className={styles.entry_image_link}>
                     <div className={styles.image_wrapper}>
                         {isVideo(imageSrc) ? (
-                            <video src={imageSrc} poster={imageSrcSet} autoPlay loop muted playsInline />
+                            <video src={imageSrc} poster={imageSrcSet} autoPlay loop muted playsInline onTimeUpdate={(e) => {
+                                if (e.currentTarget.currentTime >= 10) {
+                                    e.currentTarget.currentTime = 0; // Restart from beginning
+                                }
+                            }} />
                         ) : (
                             <img src={imageSrc} srcSet={imageSrcSet} alt={altText} />
                         )}

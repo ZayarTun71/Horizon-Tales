@@ -8,4 +8,5 @@ export const menuItems = [
         { label: "Japan", href: "japan" },
       ]
     },
+    { label: "About", href: "about" },
   ];

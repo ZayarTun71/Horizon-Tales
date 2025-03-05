@@ -15,29 +15,28 @@ const Sidebar = ({ menuItems, onPageChange }: SidebarProps) => {
             <ul className={styles.navList}>
                 {menuItems.map((item: MenuItem, index: any) => (
                     <li key={index} className={styles.navItem}>
-                        <Link href="" role="button" className={styles.navLink} onClick={!item.children ? () => onPageChange(item.href) : undefined}
+                        <button role="button" className={styles.navLink} onClick={!item.children ? () => onPageChange(item.href) : undefined}
                         >
                             {isOpen && <span>{item.label}</span>}
                             {item.children && isOpen && (
                                 <button
                                     className={styles.dropdownToggle}
                                     onClick={(e) => {
-                                        e.preventDefault();
-                                        e.stopPropagation();
+                                        e.preventDefault()
                                         setOpenDropdown(openDropdown === index ? null : index);
                                     }}
                                 >
                                     {!openDropdown ? <ChevronDown size={16} /> : <ChevronUp size={16} />}
                                 </button>
                             )}
-                        </Link>
+                        </button>
                         {item.children && openDropdown === index && (
                             <ul className={styles.subMenu}>
                                 {item.children.map((child: MenuItem, childIndex: number) => (
                                     <li key={childIndex} className={styles.subMenuItem}>
-                                        <Link href="" role="button" className={styles.subMenuLink} onClick={() => onPageChange(child.href)} >
+                                        <button role="button" className={styles.subMenuLink} onClick={() => onPageChange(child.href)} >
                                             {child.label}
-                                        </Link>
+                                        </button>
                                     </li>
                                 ))}
                             </ul>

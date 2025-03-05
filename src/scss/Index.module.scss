@@ -1,6 +1,13 @@
 .layout {
     display: flex;
+    width: 100vw;
+    /* Full viewport width */
+    width: 100%;
+    /* Full parent container width */
+    max-width: 100%;
+    /* Prevents overflow */
     min-height: 100vh;
+
 }
 
 .s_page {

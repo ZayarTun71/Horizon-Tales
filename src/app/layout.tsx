@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/app/globals.scss";
 import Preloader from "@/components/Preloader";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Preloader /> {/* Preloader should be here for all pages */}
+        <Preloader />
+        <Suspense fallback={<Preloader />}>
         {children}
+        </Suspense>
       </body>
     </html>
   );

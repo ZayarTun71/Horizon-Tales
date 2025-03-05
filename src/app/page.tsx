@@ -12,7 +12,6 @@ import Preloader from "@/components/Preloader";
 export default function Home() {
 
   const router = useRouter();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
   const [activePage, setActivePage] = useState("home");
 
@@ -23,30 +22,31 @@ export default function Home() {
 
   const handlePageChange = (href: string) => {
     setActivePage(href);
-    router.push(`/?page=${href}`);
+    router.replace(`/?page=${href}`, { scroll: false });
   };
 
   const renderContent = () => {
-    
+    // Check if the activePage is "home" or "/home"
     if (activePage === "home") {
       return <Content />;
     }
 
+    // Check for other cases, like "/myanmar"
     if (activePage === "myanmar") {
-      return <div>Hello</div>;
+      return <div>Hello</div>;  // You can replace this with actual content for Myanmar
     }
 
+    // Default fallback (if activePage doesn't match any of the cases)
     return <Content />;
   };
 
   return (
     <Wrapper>
-        <div className={styles.layout}>
-          <Sidebar menuItems={menuItems} onPageChange={handlePageChange} />
-          <Suspense fallback={<Preloader/>}>
-            <div className={styles.s_page}>{renderContent()}</div>
-          </Suspense>
-        </div>
+      <div className={styles.layout}>
+        <Sidebar menuItems={menuItems} onPageChange={handlePageChange} />
+        <div className={styles.s_page}>{renderContent()}</div>
+      </div>
     </Wrapper>
   );
+
 }

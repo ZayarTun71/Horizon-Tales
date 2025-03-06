@@ -11,6 +11,7 @@ export interface SidebarProps {
 }
 
 export interface CardProps {
+    id: number,
     imageSrc: string;
     imageSrcSet: string;
     altText: string;
@@ -23,5 +24,9 @@ export interface CardProps {
 
 export interface AboutBoxProps {
     title: string;
+    text: string;
+}
+
+export interface ErrorPageProps {
     text: string;
 }

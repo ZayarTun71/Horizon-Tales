@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import styles from "@/scss/Index.module.scss";
 import { useSearchParams, useRouter } from "next/navigation";
 import About from "@/pages/About";
+import ErrorPage from "@/pages/ErrorPage";
+import Detail from "@/pages/Detail";
 
 export default function Home() {
 
@@ -28,9 +30,9 @@ export default function Home() {
 
   const renderContent = () => {
     if (activePage === "home") return <Content />;
-    if (activePage === "myanmar") return <div>Hello</div>;
     if (activePage === "about") return <About />;
-    return <Content />;
+    if (activePage.startsWith("detail/")) return <Detail />;
+    return <ErrorPage text={"Coming Soon!"}/>;
   };
 
   return (

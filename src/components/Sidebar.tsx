@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import styles from "@/scss/Sidebar.module.scss";
 import { MenuItem, SidebarProps } from "@/interfaces/Interface";
-import Link from "next/link";
 
 const Sidebar = ({ menuItems, onPageChange, activePage }: SidebarProps) => {
 

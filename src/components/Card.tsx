@@ -3,12 +3,15 @@
 import { CardProps } from "@/interfaces/Interface";
 import styles from "@/scss/Card.module.scss";
 import { Ellipsis } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const isVideo = (src: string) => {
     return /\.(mp4|webm|ogg)$/i.test(src);
 };
 
 const Card: React.FC<CardProps> = ({
+    id,
     imageSrc,
     imageSrcSet,
     altText,
@@ -18,10 +21,18 @@ const Card: React.FC<CardProps> = ({
     date,
     description,
 }) => {
+
+    const router = useRouter();
+
+    const handleDetailClick = (e: React.MouseEvent, cardID: number) => {
+        e.preventDefault();
+        router.push(`/?page=detail/${cardID}`, { scroll: false });
+    };
+
     return (
         <article className={styles.s_card}>
             <div className={styles.entry_image}>
-                <a href={link} className={styles.entry_image_link}>
+                <Link href="" className={styles.entry_image_link} onClick={(e) => handleDetailClick(e, id)}>
                     <div className={styles.image_wrapper}>
                         {isVideo(imageSrc) ? (
                             <video src={imageSrc} poster={imageSrcSet} autoPlay loop muted playsInline onTimeUpdate={(e) => {
@@ -36,25 +47,25 @@ const Card: React.FC<CardProps> = ({
                             <span className={styles.overlay_text}><Ellipsis /></span>
                         </div>
                     </div>
-                </a>
+                </Link>
             </div>
 
             <div className={styles.entry_text}>
                 <div className={styles.entry_header}>
                     <h2 className={styles.entry_title}>
-                        <a href={link}>{title}</a>
+                        <Link href={link}>{title}</Link>
                     </h2>
                     <div className={styles.entry_meta}>
                         <span className={styles.entry_meta_cat}>
                             {categories.map((category, index) => (
-                                <a key={index} href={category.link}>
+                                <Link key={index} href={category.link}>
                                     {category.name}
                                     {index !== categories.length - 1 && ", "}
-                                </a>
+                                </Link>
                             ))}
                         </span>
                         <span className={styles.entry_meta_date}>
-                            <a href={link}>{date}</a>
+                            <Link href={link}>{date}</Link>
                         </span>
                     </div>
                 </div>

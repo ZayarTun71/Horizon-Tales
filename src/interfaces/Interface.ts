@@ -20,3 +20,8 @@ export interface CardProps {
     date: string;
     description: string;
 }
+
+export interface AboutBoxProps {
+    title: string;
+    text: string;
+}

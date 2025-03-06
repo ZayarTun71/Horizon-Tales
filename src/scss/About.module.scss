@@ -1,4 +1,4 @@
-.s_about{
+.s_about {
     background-color: #F6F7F8;
     width: 100%;
     height: 100vh;
@@ -6,16 +6,68 @@
     padding: 3rem;
     display: flex;
     justify-content: center;
-    
-    .about_inner{
+
+    .about_inner {
         width: 100%;
         height: auto;
-        background-color: #ffff;
         text-align: center;
+
+        .about_entry {
+            width: 100%;
+            height: auto;
+            padding: 0 10rem;
+            h1 {
+                font-weight: 600;
+                font-size: 3.5rem;
+                line-height: 1.143;
+                letter-spacing: -0.05rem;
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+
+            .lead_text {
+                font-size: 1.1rem;
+                line-height: 1.833;
+                margin-bottom: 3.6rem;
+                word-wrap: break-word;
+                text-align: left;
+                margin-bottom: 2rem;
+            }
+
+            .about_story {
+                text-align: left;
+
+                h3 {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+
+                .story_text {
+                    font-size: 1.1rem;
+                    line-height: 1.833;
+                    margin-bottom: 3.6rem;
+                    word-wrap: break-word;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            hr {
+                border: solid #e0e0e0;
+                border-width: 1px 0 0;
+                clear: both;
+                margin: 2.4rem 0 1.6rem;
+                height: 0;
+            }
+
+            .our_stories {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+                margin-bottom: 3rem;
+            }
+        }
     }
 
-    h1{ 
-        font-weight: 600;
-        font-size: 3rem;
-    }
+
 }

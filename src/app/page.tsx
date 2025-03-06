@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <Wrapper>
       <div className={styles.layout}>
-        <Sidebar menuItems={menuItems} onPageChange={handlePageChange} />
+        <Sidebar menuItems={menuItems} onPageChange={handlePageChange} activePage={activePage}/>
         <div className={styles.s_page}>{renderContent()}</div>
       </div>
     </Wrapper>

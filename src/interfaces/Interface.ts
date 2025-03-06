@@ -7,6 +7,7 @@ export interface MenuItem {
 export interface SidebarProps {
     menuItems: MenuItem[];
     onPageChange: (href: string | any) => void;
+    activePage: string;
 }
 
 export interface CardProps {

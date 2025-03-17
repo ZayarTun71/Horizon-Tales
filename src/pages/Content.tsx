@@ -1,6 +1,7 @@
 "use client";
 
 import Card from "@/components/Card";
+import SearchBar from "@/components/SearchBar";
 import { CardData } from "@/data/ContentData";
 import styles from "@/scss/Content.module.scss";
 import { motion } from "framer-motion";
@@ -17,6 +18,7 @@ const fadeIn = {
 const Content = () => {
   return (
     <div className={`${styles.s_content}`}>
+      <SearchBar/>
       <div className={`${styles.content_inner}`}>
         {CardData.map((item, index) => (
           <motion.div
